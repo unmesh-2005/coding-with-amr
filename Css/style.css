@@ -1,0 +1,369 @@
+body {
+  font: monospace;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 3em;
+  background: #e8491d;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.dark {
+  padding: 2.5em;
+  background: #35424a;
+  color: #ffffff;
+}
+
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 2.5em;
+  min-height: 5em;
+  border-bottom: #e8491d .3em solid;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 1em 0 1em;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 1em;
+}
+
+header .highlight,
+header .current a {
+  color: #e8491d;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+
+#showcase {
+  min-height: 20em;
+  background: url('showcase.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+}
+
+#showcase h1 {
+  margin-top: 6em;
+  font-size: 25pt;
+  margin-bottom: 1em;
+}
+
+#showcase p {
+  font-size: 15pt;
+}
+
+
+#newsletter {
+  padding: 1em;
+  color: #ffffff;
+  background: #35424a;
+}
+
+#newsletter h1 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 1em;
+}
+
+#newsletter input[type="email"] {
+  padding: .4em;
+  height: 2.3em;
+  width: 24em;
+}
+
+
+#boxes {
+  margin-top: 2em;
+}
+
+#boxes .box {
+  float: left;
+
+  width: 30%;
+  padding: 10px;
+}
+
+#boxes .box img {
+  width: 8em;
+}
+
+
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 1em;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: .5em;
+}
+
+
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+
+ul#services li {
+  list-style: none;
+  padding: 2em;
+  border: #cccccc solid 1px;
+  margin-bottom: .5em;
+  background: #e6e6e6;
+}
+
+footer {
+  padding: 1.5em;
+  margin-top: 1.5em;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+@media(max-width: 76.8em) {
+
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 2em;
+  }
+
+  #showcase h1 {
+    margin-top: 4em;
+  }
+
+  #newsletter button,
+  .quote button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+    margin-bottom: .5em;
+  }
+}
+
+#boxes p {
+  border: .1em dotted black;
+  text-align: center;
+  padding: 1em;
+}
+
+#services li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  background-color: azure;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #e8491d;
+  margin: 100px auto;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+#as {
+  background-color: black;
+  color: whitesmoke;
+  border: .1em solid black;
+  width: 45%;
+  height: 30%;
+  padding: 10%;
+  margin-top: 20%;
+  margin-left: 20%;
+}
+
+#admin a {
+  color: #e8491d;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  font-size: larger;
+}
+
+#log {
+  background-color: #e8491d;
+  width: 8em;
+  height: 3em;
+  border-color: #e8491d;
+}
+
+#list {
+  margin-right: 1em;
+  margin-bottom: 3em;
+  float: left;
+  position: absolute;
+  width: auto;
+  background-color: #35424a;
+}
+
+#sidenav {
+  width: 0%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  transition: 1.5s;
+  overflow: scroll;
+}
+
+#sidenav li {
+font-size: 20pt;
+text-decoration: none;
+color: white;
+transition: .5s;
+overflow: scroll;
+display: block;
+}
+
+#sidenav li:hover {
+  background-color: #f1f1f1;
+}
+
+#sidenav button{
+  
+ 
+}
+
+.clsbtn {
+  padding-left: .5em;
+  position: absolute;
+  color: white;
+  background-color: black;
+  border: black;
+  top: 0;
+  right: 0em;
+  font-size: 20pt;
+}
+
+#opn {
+  font-size: 25pt;
+}
+
+.tut {
+  border: .5em solid gray;
+  margin: 1em;
+  padding: 1em;
+  display: none;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
