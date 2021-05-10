@@ -1,0 +1,32 @@
+tables=>
+
+
+blog:
+title name content image
+
+
+course:
+title name description playlist opening-image
+
+
+video:
+title course indexincourse location
+
+
+blog-req:
+title content image
+
+
+course-req:
+title description playlist
+
+
+image:
+title location
+
+
+video-req:
+title course location
+
+registration:
+name email password as
