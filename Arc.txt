@@ -73,7 +73,7 @@ Class-schedule -
 set( session class section day 1st-6th (name of teacher)) 
 get_one(session class section)
 
-
+https://stackoverflow.com/questions/35424982/how-can-i-enable-the-mysqli-extension-in-php-7
 
 
 
