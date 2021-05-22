@@ -1,0 +1,121 @@
+List of table:
+
+Notice_board-
+columns: id date heading HTML_content
+
+News and event-
+columns: id date heading content image
+
+Award and achievement -
+columns: id date head content image
+
+Photo_gallery-
+columns: image-location
+
+Assignment-
+columns : assignment-number week class section image session
+
+Student-list-
+columns: sn id roll student_name fathers_name mothers_name DOB
+
+Teacher-list -
+columns: sn image name position subject mobile
+
+Staff-list -
+columns: sn image staff-name designation mobile
+
+Class-schedule -
+columns: session class section day 1st-6th (name of teacher)
+
+Exam schedule-
+columns: Exam class session
+
+--------------------------------------------------
+
+Engine:
+
+Notice_board
+set(id date heading HTML_content)
+get_all()
+get_one(id)
+
+News and event
+set(id date heading content image)
+get_all()
+get_one(id)
+
+Award and achievement 
+set(id date head content image)
+get_all()
+get_one(id)
+
+Photo_gallery-gallery-
+set(photo-location)
+get_all()
+
+Assignment-
+set(assignment-number week class section image session)
+get_one(assignment-number week class section session)
+
+Student-list-
+set( sn id roll student_name fathers_name mothers_name DOB class section session)
+get_all_by_class_and_section(class section session)
+
+Teacher-list -
+Set(sn image name position subject mobile)
+get_all()
+
+Staff-list -
+set(sn image staff-name designation mobile)
+get_all()
+
+Class-schedule -
+set( session class section day 1st-6th (name of teacher)) 
+get_one(session class section)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
