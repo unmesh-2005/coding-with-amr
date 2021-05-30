@@ -60,14 +60,12 @@ function quote(data) {
 
 const server = http.createServer((req,res)=>{
   var file = req.url.substring(1);
+  var a=(req.url.substring(1)).split("/");
   if (file.length == 0){
-    file = "admin.html";
+    file = "index.html";
   }
-  if(file.indexOf("/") != -1){
-    var a=req.url.split("/");
-    console.log(a);
-    if(a[1]="post"){
-      switch(a[2]){
+    if(a[0]=="post"){
+      switch(a[1]){
         case "admin":
           
           if (req.method == 'POST') {
@@ -81,7 +79,7 @@ const server = http.createServer((req,res)=>{
             req.on('end', () => {
               var post = qs.parse(body);
               var admint=admin(post);
-              console.log(admint);
+              console.log("Someone logged in as admin.");
               if(admint){
                 res.writeHead(200, { 'Conten-type': 'text/html' });
                 var newslatter = "";
@@ -101,7 +99,7 @@ const server = http.createServer((req,res)=>{
                 for(var y=0; y<id2;y++){
                   quotes+="<br>name:"+data2.quote[y].name+"<br>email:"+data2.quote[y].email+"<br>massage:"+data2.quote[y].massage+"<br>";
                 }
-                res.write("<h1>subscriptions :</h1></br>"+newslatter+"<br><br><h1>quotes:</h1><br>"+quotes);
+                res.end("<h1>subscriptions :</h1></br>"+newslatter+"<br><br><h1>quotes:</h1><br>"+quotes);
               }
             });
           }
@@ -137,25 +135,26 @@ const server = http.createServer((req,res)=>{
               quote(post);
             });
           }
-          
           break;
         default:
-          res.write("404 invalid link");
+          res.end("404 invalid link");
       }
     }
-  }
-  if (file.indexOf("/") == -1){
-      fs.readFile(file, (err, data) => {
-        if (err) {
-          console.log(err);
-          return;
-        }
-        else {
-          res.writeHead(200, { 'Conten-type': 'text/html' });
-          res.write(data);
-          res.end;
-        }
-      });
+  if (a[0] != "post"){
+    try{
+      if (file == "favicon.ico") {
+        res.writeHead(204);
+      }else{
+      var data = fs.readFileSync(file);
+      res.writeHead(200, { 'Conten-type': 'text/html' });
+      res.write(data);
+      res.end();
+      }
+    }
+    catch(err){
+      console.log(err);
+    }
+      
   }
 });
 

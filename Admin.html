@@ -22,15 +22,18 @@
       <h1 style="color:#e8491d;">Admin panel</h1>
       <br>
       <br>
-      <label for="user">Username: </label>
-      <input type="text" name="user" id="usr">
+      <form action="http://localhost:3000/post/admin" method="post" accept-charset="utf-8">
+        
+      <label for="username">Username: </label>
+      <input type="text" name="username" id="usr">
       <br>
       <br>
       <label for="pass">Password:</label>
-      <input type="password" name="pass" id="psw">
+      <input type="password" name="password" id="psw">
       <br>
       <br>
       <button type="submit" id="log">log-in</button>
+      </form>
       <br>
       <br>
     </div>

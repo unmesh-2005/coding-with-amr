@@ -7,8 +7,8 @@
   <meta name="keywords" content="programming, amr, free programming">
   <meta name="author" content="Abdullah-al Muntakim Rahman">
   <title>Code with AMR</title>
-  <script src="./JavaScript/main.js"></script>
-  <link rel="stylesheet" href="./Css/style.css">
+  <script src="JavaScript/main.js"></script>
+  <link rel="stylesheet" href="Css/style.css">
 </head>
 
 <body onload=lod()>
@@ -25,8 +25,8 @@
         <nav>
           <ul>
             <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="tutorial.html">tutorials</a></li>
+            <li><a href="About.html">about</a></li>
+            <li><a href="Tutorial.html">tutorials</a></li>
           </ul>
         </nav>
       </div>
@@ -49,8 +49,8 @@
     <section id="newsletter">
       <div class="container">
         <h1>Subscribe To My Newsletter</h1>
-        <form>
-          <input type="email"  placeholder="Enter Email..." required>
+        <form action="http://localhost:3000/post/newslatter" method="post" accept-charset="utf-8">
+          <input type="email" name="email" placeholder="Enter Email..." required>
           <button type="submit" class="button_1">Subscribe</button>
         </form>
       </div>

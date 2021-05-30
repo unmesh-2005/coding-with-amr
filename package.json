@@ -1,0 +1,19 @@
+{
+  "name": "coding-with-amr",
+  "version": "1.0.0",
+  "description": "a site for learning programming.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unmesh-2005/coding-with-amr.git"
+  },
+  "author": "AM_Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unmesh-2005/coding-with-amr/issues"
+  },
+  "homepage": "https://github.com/unmesh-2005/coding-with-amr#readme"
+}

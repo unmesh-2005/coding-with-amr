@@ -22,8 +22,8 @@
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li class="current"><a href="tutorial.html">Tutorials</a></li>
+            <li><a href="About.html">about</a></li>
+            <li class="current"><a href="Tutorial.html">Tutorials</a></li>
           </ul>
         </nav>
       </div>
@@ -73,18 +73,18 @@
         <aside id="sidebar">
           <div class="dark">
             <h3>Get A Quote</h3>
-            <form class="quote">
+            <form class="quote" action="http://localhost:3000/post/quote" method="post">
               <div>
                 <label>Name</label><br>
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" name="name">
               </div>
               <div>
                 <label>Email</label><br>
-                <input type="email" placeholder="Emial Address">
+                <input type="email" placeholder="Emial Address" name="email">
               </div>
               <div>
                 <label>Message</label><br>
-                <textarea placeholder="Message"></textarea>
+                <textarea placeholder="Message" name="massage"></textarea>
               </div>
               <button class="button_1" type="submit">Send</button>
             </form>
